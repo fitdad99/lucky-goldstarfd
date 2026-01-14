@@ -91,29 +91,27 @@ function App() {
   if (!isAuthenticated) {
     return (
       <div className="container" style={{ padding: '20px', maxWidth: '400px', margin: '0 auto', paddingTop: '50px' }}>
-        <section className="nes-container with-title is-centered">
-          <p className="title">Good Boy Tracker</p>
-          <form onSubmit={handleLogin}>
-            <div className="nes-field" style={{ marginTop: '20px' }}>
-              <label htmlFor="password_field">Enter Password:</label>
-              <input 
-                type="password" 
-                id="password_field" 
-                className="nes-input" 
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter shared password"
-                autoFocus
-              />
-            </div>
-            {authError && (
-              <p style={{ color: '#e76e55', marginTop: '10px', fontSize: '14px' }}>{authError}</p>
-            )}
-            <button type="submit" className="nes-btn is-primary" style={{ width: '100%', marginTop: '20px' }}>
-              LOGIN
-            </button>
-          </form>
-        </section>
+        <h1 style={{ textAlign: 'center', marginBottom: '30px' }}>Gold Star Collector</h1>
+        <form onSubmit={handleLogin}>
+          <div className="nes-field" style={{ marginTop: '20px' }}>
+            <label htmlFor="password_field">Enter Password:</label>
+            <input 
+              type="password" 
+              id="password_field" 
+              className="nes-input" 
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter shared password"
+              autoFocus
+            />
+          </div>
+          {authError && (
+            <p style={{ color: '#e76e55', marginTop: '10px', fontSize: '14px' }}>{authError}</p>
+          )}
+          <button type="submit" className="nes-btn is-primary" style={{ width: '100%', marginTop: '20px' }}>
+            LOGIN
+          </button>
+        </form>
         <div className="nes-balloon from-left" style={{ marginTop: '20px' }}>
           <p>Psst! Ask Mom or Dad for the password!</p>
         </div>
@@ -139,15 +137,13 @@ function App() {
         </button>
       </div>
 
-      <section className="nes-container with-title is-centered">
-        <p className="title">Good Boy Tracker</p>
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
         <div className="nes-balloon from-left">
           <p>Let's-a go! Get those stars!</p>
         </div>
-      </section>
+      </div>
 
-      <section className="nes-container is-dark with-title" style={{ marginTop: '20px', textAlign: 'center' }}>
-        <p className="title">Current Stash</p>
+      <section className="nes-container is-rounded" style={{ marginTop: '20px', textAlign: 'center', backgroundColor: 'white' }}>
         <h1><i className="nes-icon star is-large"></i> x {stars}</h1>
       </section>
 
